@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Consolas', monaco, monospace;
+    font-family: 'Consolas';
 }
 body{
     display: flex;
@@ -29,13 +29,14 @@ body{
 .calculator{
     position: relative;
     display: grid;
+  
 }
 .calculator .value{
     position: relative;
     grid-column: span 4;
     height: 100px;
     left: 10px;
-    width: calc(100% - 30px);
+    width: calc(500px - 30px);
     border: none;
     outline: none;
     background: #a7af7c;
