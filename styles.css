@@ -293,6 +293,7 @@ ion-icon{
   }
 
   .nav-main ul.nav-menu.show {
+     width: 100%;
     transform: translateX(-20px);
   }
 
