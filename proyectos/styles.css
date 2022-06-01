@@ -91,6 +91,7 @@ hr {
   display: inline-block;
   border: 0;
   font-weight: bold;
+  
   padding: 10px 20px;
   background: #262626;
   color: #fff;
@@ -271,6 +272,7 @@ ion-icon{
 @media (max-width: 700px) {
   .menu-btn {
     display: block;
+    z-index:4;
   }
 
   .menu-btn:hover {
