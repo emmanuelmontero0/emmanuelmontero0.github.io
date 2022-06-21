@@ -1,0 +1,79 @@
+﻿*{
+   margin: 0;
+   padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+:root{
+  --color: yellow;
+}
+body{
+  
+   background: #000;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+ p {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  padding: 10px 0;
+  font-size: 35px; 
+}
+  
+ .heart {
+    position: relative;
+    margin: auto;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation: latido 1s infinite;
+  }
+  .heart::after {
+    background-color: var(--color);
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart::before {
+    content: '';
+    background-color: var(--color);
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 20px;
+  }
+
+@keyframes latido {
+  50%{
+    transform: scale(2) rotate(-45deg);
+  }
+}
