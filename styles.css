@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+/* Variables generales  */
 :root {
   --color-text: #fff;
   --border-radius-image:30px;
