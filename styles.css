@@ -332,4 +332,8 @@ ion-icon{
   .footer-links .footer-container ul {
     text-align: center;
   }
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
