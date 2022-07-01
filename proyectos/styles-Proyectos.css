@@ -4,14 +4,10 @@
   margin: 0;
   padding: 0;
 }
-/* Variables generales  */
 :root {
-  --color-text: #fff;
-  --border-radius-image:30px;
-  --zize-skills: 120px;
-
+  --color-text:#fff;
+  --sizeOfBox : 400px;
 }
-
 body {
   font-family: "Oswald", sans-serif;
   background-image: linear-gradient(130deg, #001c23 0, #001b27 5%, #001a29 10%, #00192c 15%, #00192e 20%, #00172f 25%, #001630 30%, #001530 35%, #001330 40%, #07122f 45%, #10102d 50%, #170e2b 55%, #1c0c28 60%, #200a26 65%, #240822 70%, #27061f 75%, #29051b 80%, #2b0417 85%, #2c0413 90%, #2d040e 95%, #2d0407 100%);  color:#fff;
@@ -19,21 +15,17 @@ body {
   text-align: center;
   color:var(--color-text);
 }
-
 a {
   color: var(--color-text);
   text-decoration: none;
 }
-
 ul {
   list-style: none;
 }
-
 .container {
   width: 90%;
   margin: auto;
 }
-
 /* Navigation */
 .nav-main {
   font-size: 17px;
@@ -43,49 +35,40 @@ ul {
   height: 60px;
   padding: 20px 0;
 }
-
 .nav-brand {
   width: 70px;
 }
-
 /* Navbar Left */
 .nav-main ul {
   display: flex;
 }
-
 .nav-main ul li {
   padding: 10px;
 }
-
 .nav-main ul li a {
   padding: 2px;
 }
-
 .nav-main ul li a:hover {
   border-bottom: 2px solid #fff;
 }
-
 .nav-main ul.nav-menu {
   flex: 1;
   margin-left: 20px;
 }
-
 hr {
   margin: 10px 0;
+  color:var(--color-text);
 }
-
 /* Responsive Button */
 .menu-btn {
   cursor: pointer;
   position: absolute;
   top: 15px;
   right: 30px;
-  z-index: 2;
+  z-index: 4;
   display: none;
 }
-
 /* SHOWCASE */
-
 .btn {
   padding: 0;
   margin: 5px;
@@ -99,103 +82,137 @@ hr {
   color: var(--color-text);
   font-size: 15px;
   border: 1px solid #fff;
-  }
-
+}
 .btn:hover {
   opacity: 0.9;
 }
-.news-cards ul {
-  text-transform: uppercase;
-  align-items: center;
-  padding: 0;
-  display: flex;
-}
-.showcase {
-  width: 100%;
-  height: 550px;
-  background: url("showcase.jpg") no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: flex-end;
-  padding-bottom: 50px;
-  margin-bottom: 20px;
+/* Aqui empiezan los estilos de los circulos */
+.principal {
   color: var(--color-text);
-  border-radius: var(--border-radius-image);
-}
-
-.showcase h2,
-.showcase p {
-  margin-bottom: 10px;
-}
-.showcase .btn {
-  margin-top: 20px;
-}
-
-/* News Cards */
-.news-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 15px;
 }
-.news-cards div {
-  cursor: pointer;
-  margin: 0 5px;
+.box {
+  margin: 10px;
+  position: relative;
+  width: var(--sizeOfBox);
+  height: var(--sizeOfBox);
+  background: rgba(0, 0 , 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
 }
-/* Aqui se puede cambiar el tamaño y color de los skills   */
-ion-icon{
-  width: var(--zize-skills);
-  height: var(--zize-skills);
-  color: #1f7bf3;
+.box::before {
+  content: '';
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg, #00ccff, #d400dd );
+  transition: 0.5s;
+  animation: rotate 4s linear infinite;
 }
-.news-cards h3 {
-  font-size: 20px;
-  margin: 10px 0;
+.box:hover::before{
+  inset: -20px 0px;
 }
-/* CARDS BANNER ONE */
-.cards-banner-one {
+@keyframes rotate{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+.box::after{
+  content: '';
+  position: absolute;
+  inset: 6px;
+  background: #162052;
+  border-radius: 50%;
+  z-index: 1;
+}
+.conten{
+  position: absolute;
+  inset: 30px;
+  z-index: 3;
+  border: 6px solid #070a1c;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.conten img{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 350px;
-  background: url("./img/tech-red.jpg");
-  text-align: left;
-  margin-bottom: 40px;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
 }
-.cards-banner-one .content {
-  width: 40%;
-  padding: 90px 0 0 30px;
-  color: var(--color-text);
+.box:hover .conten img{
+  opacity: 0;
 }
-.cards-banner-one p,
-.cards-banner-two p {
-  margin: 10px 0 20px 0;
-}
-/* Follow */
-.social {
-  margin: 50px;
-}
-.social p {
+.conten h2{
+  position: relative;
+  font-size: 1.5em;
   text-align: center;
-  font-size: 30px;
-  margin-bottom: 20px;
+  color: var(--color-text);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
+.conten h2 span{
+  font-weight: 300;
+  font-size: 0.75em;
+}
+.conten a{
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #070a1c;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.conten a:hover{
+  letter-spacing: 0.2em;
+}
+/* Predeterminado */
 .links {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.links a {
-  margin: 0 30px;
-  transition: .5s ease-in-out;
+/* Links */
+.footer-links {
+  background: #2f3640;
+  color: #616161;
+  font-size: 12px;
+  padding: 35px 0;
 }
-.links a i {
-  font-size: 3em;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
 }
-.links a:hover{
-    transform: translateY(-10px);
-    color:#d0c8c87d;
+.footer-container ul {
+  margin: 0 auto;
+}
+.footer-links li {
+  line-height: 2.8;
 }
 .footer {
   background: #2f3640;
@@ -206,17 +223,15 @@ ion-icon{
   font-size: 1rem;
   padding-bottom: 20px;
 }
-
 /* Mobil */
 @media (max-width: 700px) {
   .menu-btn {
     display: block;
+    z-index:5;
   }
-
   .menu-btn:hover {
     opacity: 0.5;
   }
-
   .nav-main ul.nav-menu {
     display: block;
     position: absolute;
@@ -231,7 +246,6 @@ ion-icon{
     transform: translateX(-500px);
     transition: transform 0.5s ease-in-out;
   }
-
   .nav-main ul.nav-menu li {
     padding: 20px;
     border-bottom: #ccc solid 1px;
@@ -240,48 +254,13 @@ ion-icon{
   .nav-main ul.nav-menu li:last-child {
     border-bottom: 0;
   }
-
   .nav-main ul.nav-menu.show {
      width: 100%;
     transform: translateX(-20px);
+    z-index:4;
   }
 
   .nav-main ul.nav-menu-right {
     margin-right: 50px;
-  }
-
-  .news-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cards-banner-one .content {
-    width: 80%;
-  }
-
-  .footer-links .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .news-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .cards-banner-one .content,
-  .cards-banner-two .content {
-    width: 100%;
-    padding: 60px 20px;
-  }
-  .footer-links .footer-container {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-links .footer-container ul {
-    text-align: center;
-  }
-  .links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
