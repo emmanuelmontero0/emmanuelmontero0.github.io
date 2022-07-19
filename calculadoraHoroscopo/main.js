@@ -80,7 +80,7 @@ function calc() {
         writeBody(SIGNOS[5], result);
     }
     //Leo 
-    else if (day >= 24 && day <= 31) {
+    else if (day >= 24 && day <= 31 && mes == "julio") {
         writeBody(SIGNOS[6], result);
     } else if (day <= 23 && day >= 1 && mes == "agosto") {
         writeBody(SIGNOS[6], result);
