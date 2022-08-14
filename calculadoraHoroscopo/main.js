@@ -1,3 +1,4 @@
+import { zodiaco, create } from "./description.js";
 /*
     ==============================================
         Aqui se reciben los datos de los select 
@@ -18,7 +19,6 @@ boton.addEventListener("click", calc);
 
 
 function writeBody(signo, boxInnert) {
-    console.log(`Tu signo es: ${signo}`);
     boxInnert.innerText = `Tu signo es: ${signo}`;
     imgResult.innerHTML = `<img src="img/${signo.toLowerCase()}.jpg" alt="imagen de ${signo}">`
 
@@ -80,7 +80,7 @@ function calc() {
         writeBody(SIGNOS[5], result);
     }
     //Leo 
-    else if (day >= 24 && day <= 31 && mes == "julio") {
+    else if (day >= 22 && day <= 31 && mes == "julio") {
         writeBody(SIGNOS[6], result);
     } else if (day <= 23 && day >= 1 && mes == "agosto") {
         writeBody(SIGNOS[6], result);

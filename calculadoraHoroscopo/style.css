@@ -63,11 +63,12 @@ option {
     justify-content: center;
 }
 .text-box {
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
     text-align: left;
+
 }
 .result-name {
     font-size: 1.5em;
@@ -87,7 +88,7 @@ option {
     width: 300px;
     height: var(--height-Box);
     border-radius: 30px;
-    margin: 20px;
+    margin:0 20px;
 }
 .buttom {
     margin-top: 10px;
