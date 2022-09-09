@@ -124,7 +124,7 @@ header {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    background: url(img/foto.jpg) no-repeat center left/cover;
+    background: url(Img/foto.jpg) no-repeat center left/cover;
 }
 /* Seccion sobre mi */
 .about h3{
