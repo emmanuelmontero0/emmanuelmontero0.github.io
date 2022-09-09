@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slider Sin JavaScript</title>
+</head>
+<style type="text/css">
+	*{
+	margin: 0;
+	padding: 0
+}
+:root {
+	--widthtImg: 300px;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	justify-content: center;
+	background-image: linear-gradient(to right top, #242527, #252627, #272728, #282828, #292929, #262626, #242424, #212121, #1b1b1b, #141414, #0c0c0c, #000000);
+	font-family: verdana;
+	color: #fff;
+}
+
+.container{
+	width: 90%;
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+	justify-content: center;
+}
+/*Inicio del slider*/
+ul.slider{
+	position: relative;
+	width: var(--widthtImg);
+	height: 300px;
+	margin-top:10px ;
+}
+.slider li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	opacity: 0;
+	transition: opacity .8s;
+}
+.slider li img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 25px;
+}
+.slider li:first-child{
+	opacity: 1;
+}
+
+.slider li:target {
+	opacity: 1;
+}
+/*Final del Slider*/
+/*Inicio de Botones de menu*/
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu ul {
+	display: flex;
+	margin: 10px;
+}
+.menu ul li {
+	width: 30px;
+	border-radius: 100%;
+	margin: 10px;
+}
+.menu ul li a{
+	font-size: 1em;
+	color: #ccc;
+	padding: 15px;
+	border-radius: 100%;
+	background: rgba(0, 0, 0, .8);
+}
+/*Final de botones de menu*/
+/*Inicio Resposivo*/
+@media (max-width: 350px ) {
+	:root {
+		--widthtImg: 100%;
+	}
+	
+}
+/*Final Responsivo*/
+
+
+
+
+</style>
+
+<body>
+	<div class="container">
+		<h2>Slider Sin JavaScript</h2>
+		<ul class="slider">
+			
+			<li id="slider1">
+				<img src="1.jpg">
+			</li>
+
+			<li id="slider2">
+				<img src="2.jpg">
+			</li>
+			
+			<li id="slider3">
+				<img src="3.jpg">
+			</li>
+			
+			<li id="slider4">
+				<img src="4.jpg">
+			</li>
+		</ul>
+		<div class="menu">
+			<ul>
+				<li><a href="#slider1">1</a></li>
+				<li><a href="#slider2">2</a></li>
+				<li><a href="#slider3">3</a></li>
+				<li><a href="#slider4">4</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
