@@ -20,7 +20,6 @@ body {
     display: flex;
     background: #191919;
     color: var(--color-text);
-    /*background: linear-gradient(130deg, #001c23 0, #001b27 5%, #001a29 10%, #00192c 15%, #00192e 20%, #00172f 25%, #001630 30%, #001530 35%, #001330 40%, #07122f 45%, #10102d 50%, #170e2b 55%, #1c0c28 60%, #200a26 65%, #240822 70%, #27061f 75%, #29051b 80%, #2b0417 85%, #2c0413 90%, #2d040e 95%, #2d0407 100%);  color:#fff;*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex-direction: column;
     align-items: center;

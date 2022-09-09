@@ -1,133 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>Emmanuel Ojeda</title>
+      <link rel="stylesheet" type="text/css" href="./styles.css">
+      <link rel="stylesheet" href="styles.css">
+    <!-- Aqui esta el google analitics-->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z34W6D46XG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z34W6D46XG');
+    </script>
+  </head>
+  <body>
+    <!-- Fondo para responsive -->
+    <div  class="fondo">
+    </div>
+      <!-- Seccion de menu  -->
+      <header>
+        <nav class="nav-bar">
+          <img src="./svg/list.svg" alt="" width="50px" class="btn" >
+          <ul class="menu">
+            <img class="exit" src="./svg/x.svg" alt="" >
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#jobs">Jobs</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+          <a href="#"></a>
+        </nav>
+      </header>
 
-<head>
-  <meta charset="UTF-8">
-    <link rel="icon" href="/img/logo-black.ico">
+      <!--La imagen esta con un background-->
+      <div id="home" class="container">
+          <div class="image"></div>
+          <h2>Hola mi nombre es Emmanuel Ojeda.</h2>
+          <p>Yo soy un <span>Desarrollador Web</span></p>
+      </div>
+  <!-- Descripcion sobre mi -->
+      <div class="about container-fluid" id="about" >
+        <section>
+          <div id="parrafo1">
+            <h3>About me</h3>
+              <p>Mi nombre es Emmanuel Ojeda soy un estudiante de informatica, actualmente estoy enfocado en todo lo que tiene que ver con el Diseño web. Exlelente para trabajar en grupo.</p>
+          </div>
+            <img id="image1" src="./svg/Designer.svg" alt="imagen">
+        </section>
+      </div>
+  <!-- SKILLS -->
+  <hr>
+    <div class="skills container-fluid" id="skills">
+      <section>
+        <div id="parrafo2">
+          <h3>My skills</h3>
+          <p>He aprendido a utilizar varias herramientas para el diseño web responsivo y estatico tambien para la edicion de fotos y videos.</p>
+        </div>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Montero-077</title>
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- Ionic.io -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<!-- Aqui esta el google analitics-->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z34W6D46XG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z34W6D46XG');
-</script>
-</head>
-
-<body>
-
-  <div class="menu-btn">
-    <i class="fas fa-bars fa-2x"></i>
-  </div>
-
-  <div class="container">
-    <!-- Navigation -->
-    <nav class="nav-main">
-      <!-- Brand -->
-      <img src="img/logo-black.png" alt="Montero" class="nav-brand">
-      <!-- Left Nav -->
-      <ul class="nav-menu">
-        <li>
-          <a href="#">Inicio</a>
-        </li>
-        <li>
-          <a href="proyectos/proyectos.html">Proyectos</a>
-        </li>
-        <li>
-          <a href="/contactos/contactos.html">Contactos</a>
-        </li>
-      </ul>
-
-      <!-- Right Nav -->
-      <ul class="nav-menu-right">
-      </ul>
-    </nav>
+        <img id="image2" src="./svg/html-css-js.svg" alt="image">
+      </section>
+    </div>
     <hr>
-
-    <!-- SHOWCASE -->
-    <header class="showcase">
-      <h2>Web Developer</h2>
-      <p> <blockquote>“Si decides hacer solo las cosas que sabes que van a funcionar, dejarás un montón de oportunidades encima de la mesa”</blockquote></p>
-    </header>
-<!-- Skills -->
-    <h2>Skills</h2>
-
-    <div class="news-cards">
-      <div>
-        <ion-icon name="logo-html5"></ion-icon>
-        <h3>Html</h3>
+  <!-- JOBS -->
+    <div class=" container-fluid" id="jobs">
+        <h3>My Jobs</h3>
+        <div class="jobs container-fluid">
+          <!-- JOB1 -->
+          <div class="job izquierda" id="job1">
+            <!-- TEXTO DESCRIPTIVO -->
+            <div class="text">
+              <h4>Calculadora del Zoodiaco</h4>
+              <p>Esta es una calculadora que te dice tu signo del Zoodiaco de acuerdo a tu fecha de nacimiento</p>
+                <a href="./calculadoraHoroscopo\index.html">Ir al proyecto</a>
+            </div>
+            <img src="./img/job1.png" alt="">
+          </div>
+          <!-- JOB2 -->
+          <div class="job derecha" id="job2">
+            <!-- TEXTO DESCRIPTIVO -->
+            <div class="text">
+              <h4>Corazón</h4>
+              <p>Este es una demostracion de los Keyframes de CSS</p>
+                <a href="./heart/index.html">Ir al proyecto</a>
+            </div>
+            <img src="./img/job2.png" alt="">
+          </div>
+          <!-- JOB3 -->
+          <div class="job izquierda" id="job3">
+            <!-- TEXTO DESCRIPTIVO -->
+            <div class="text">
+              <h4>Portafolio de Imagenes</h4>
+              <p>Con el uso de Java-Script para acomodar las imagenes y mostrar lo que el usuario este buscando.</p>
+                <a href="./protfolio/index.html">Ir al proyecto</a>
+            </div>
+            <img src="./img/job3.png" alt="">
+          </div>
+          <!-- JOB4 -->
+          <div class="job izquierda" id="job4">
+            <!-- TEXTO DESCRIPTIVO -->
+            <div class="text">
+              <h4>Silder sin Java-Script</h4>
+              <p>Un silder sin java scrip para ahorrar espacio en el servidor y demostrar lo increible de los Estilos en Casacada(CSS)</p>
+                <a href="./sliderNoJava/index.html">Ir al proyecto</a>
+            </div>
+            <img src="./img/job4.png" alt="">
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="group1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="./img/log-remove.png" alt="Logo de Emmanuel Ojeda">
+          </a>
+        </figure>
       </div>
-      <div>
-        <ion-icon name="logo-css3"></ion-icon>
-        <h3>Css</h3>
+      <div class="box">
+        <h2>Todo en desarrollo Web</h2>
+        <p>La mejor opcion a la hora de crear un equipo para crear paginas web</p>
       </div>
-      <div>
-        <ion-icon name="logo-javascript"></ion-icon>
-        <h3>Java-script</h3>
-      </div>
-      <div>
-        <ion-icon name="logo-python"></ion-icon>
-       <h3>Python</h3>
-        
+      <div class="box">
+        <h2>Siguenos</h2>
+        <div class="red-social">
+          <a href=""><img src="./svg/facebook.svg" alt=""></a>
+          <a href=""><img src="./svg/instagram.svg" alt=""></a>
+          <a href=""><img src="./svg/twitter.svg" alt=""></a>
+        </div>
       </div>
     </div>
-   
-    <!-- Card Banner 1-->
-    <section class="cards-banner-one">
-      <div class="content">
-        <h2>¿Qué es esto?</h2>
-        <!-- lorem 20 -->
-        <p>Este es un sitio donde estare publicando mi progreso como desarrollador web.</p>
-        <a class="btn" href="/proyectos/proyectos.html">Ir a los proyectos.</a>
-
-      </div>
-    </section>
-
-    <!-- Follow -->
-    <section class="social">
-      <p>Contactos</p>
-      <div class="links">
-        <a target="_blank" href="https://www.facebook.com/profile.php?id=100009701500851">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a target="_blank" href="https://twitter.com/Emmanue71528208">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/in/emmanuel-ojeda-270285204/">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a target="_blank" href="https://www.instagram.com/emmanuel_oje.5/">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a target="_blank" href="https://github.com/emmanuelmontero0">
-          <i class="fab fa-github"></i>
-        </a>
-
-      </div>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <h3>Emmanuel Ojeda </h3>
+    <div class="gropup2">
+      <small>&copy; 2022 <b>Emmanuel Ojeda</b> - Todos los Derechos Reservados.</small>
+    </div>
   </footer>
-
-  <!-- Scroll Reveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="main.js"></script>
-</body>
-
-</html>
+      <script type="text/javascript" src="./main.js"></script>
+  </body>
+  </html>
