@@ -129,7 +129,7 @@ header {
   white-space: nowrap;
   border-right: 2px solid;
   width: 29ch;
-  animation: typing 5s steps(29), blink .7s infinite step-end alternate;
+  animation: typing 5s steps(29), blink .5s infinite step-end alternate;
   overflow: hidden;
 }
 @keyframes typing {
