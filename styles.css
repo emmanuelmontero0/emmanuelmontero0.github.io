@@ -23,14 +23,14 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-background-image: linear-gradient(to top, #180755, #1c1a64, #212a72, #27397f, #2f498c, #305294, #325c9c, #3465a3, #2d6ba8, #2670ac, #1d76b0, #117bb3);    color: #f1f1f1;
+    background-color: #161616;
+    color: #f1f1f1;
     max-width: 100vw;
 }
 p {
   font-size: 1.1rem;
   font-weight: 600;
 }
-/* ANIMACION APARECER */
 /*
 ============
     Menu
@@ -80,10 +80,10 @@ header {
 .nav-bar ul li a {
   color: #f1f1f1;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 600;
-  transition: .9s;
+  transition: all .3s ease-in-out;
 }
 .nav-bar ul li a:hover {
   border-bottom: 4px #f1f1f1 solid;
@@ -106,9 +106,6 @@ header {
   z-index: 1;
   background: rgba(255, 255, 255, .7);
 }
-.nav-bar img:hover{
-
-}
 .menu .exit{
   filter: invert(1);
 }
@@ -125,6 +122,22 @@ header {
     width: 200px;
     border-radius: 50%;
     background: url(Img/foto.jpg) no-repeat center left/cover;
+}
+/* ANIMACION DE LAS LETRAS */
+.container h2 {
+  display: block;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 29ch;
+  animation: typing 5s steps(29), blink .7s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {width: 0 }
+}
+@keyframes blink {
+  50% {
+    border: transparent}
 }
 /* Seccion sobre mi */
 .about h3{
@@ -296,10 +309,69 @@ header {
   color: #f1f1f1;
   padding: 10px;
   font-size: 1.2rem;
-
 }
-@media screen (max-width: 300px;) {
-  body {
-    color:red;
+/* Destokp */
+@media (min-width: 700px) {
+  .jobs{
+    grid-template-columns: repeat(2, 1fr)
+  }
+  .about section, .skills section{
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px;
+  }
+  .footer .group1 {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+@media (min-width: 1020px) {
+  .menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0);
+  }
+  .nav-bar ul li a {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 35px;
+    padding: 15px 30px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 15px  #333;
+    transition: all .5s ease-in-out;
+    transform: scale(.9);
+  }
+  .nav-bar ul li a:hover {
+    transform: scale(1);
+    border: none;
+  }
+  .exit {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .btn-subir{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, .9);
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    border-radius: 50%;
+    height: 80px;
+    transition: .5s;
+  }
+  .btn-subir img{
+    width: 50px;
   }
 }

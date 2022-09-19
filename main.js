@@ -24,12 +24,12 @@ let job1 = document.querySelector('#job1');
 let job2 = document.querySelector("#job2");
 let job3 = document.querySelector("#job3");
 let job4 = document.querySelector("#job4");
-let job5 = document.querySelector("#job5");
 
 const cargarImagen = (entradas, observador)=>{
   entradas.forEach((entrada) => {
     if (entrada.isIntersecting) {
       entrada.target.classList.add('visible');
+      document.querySelector(".btn-subir").style = "display: flex"
     }
     else{entrada.target.classList.remove('visible');}
   });
@@ -47,10 +47,9 @@ observador.observe(image1);
 observador.observe(image2);
 observador.observe(parrafo1);
 observador.observe(parrafo2);
-observador.observe(home);
+// observador.observe(home);
 /*IMAGENES DE LOS TRABAJOS*/
 observador.observe(job1);
 observador.observe(job2);
 observador.observe(job3);
 observador.observe(job4);
-observador.observe(job5);

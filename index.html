@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="">
+      <link rel="icon" href="img/log-remove.ico">
       <title>Emmanuel Ojeda</title>
       <link rel="stylesheet" type="text/css" href="./styles.css">
       <link rel="stylesheet" href="styles.css">
@@ -21,13 +22,17 @@
     <!-- Fondo para responsive -->
     <div  class="fondo">
     </div>
+    <!-- Boton subir -->
+    <div class="btn-subir">
+      <a href="#home"><img src="./svg/caret-up.svg" class="arr"></a>
+    </div>
       <!-- Seccion de menu  -->
       <header>
         <nav class="nav-bar">
           <img src="./svg/list.svg" alt="" width="50px" class="btn" >
           <ul class="menu">
             <img class="exit" src="./svg/x.svg" alt="" >
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#jobs">Jobs</a></li>
@@ -36,20 +41,22 @@
           <a href="#"></a>
         </nav>
       </header>
-
       <!--La imagen esta con un background-->
       <div id="home" class="container">
           <div class="image"></div>
-          <h2>Hola mi nombre es Emmanuel Ojeda.</h2>
-          <p>Yo soy un <span>Desarrollador Web</span></p>
+          <div class="animation">
+            <h2>Hola mi nombre es Emmanuel Ojeda.</h2>
+            <p>Yo soy un <span>Desarrollador Web</span></p>
+          </div>
       </div>
   <!-- Descripcion sobre mi -->
       <div class="about container-fluid" id="about" >
         <section>
           <div id="parrafo1">
-            <h3>About me</h3>
-              <p>Mi nombre es Emmanuel Ojeda soy un estudiante de informatica, actualmente estoy enfocado en todo lo que tiene que ver con el Diseño web. Exlelente para trabajar en grupo.</p>
+            <h3>Sobre mi</h3>
+              <p>Mi nombre es Emmanuel Ojeda soy un estudiante de informatica, actualmente estoy enfocado en todo lo que tiene que ver con el Diseño web con un certificado en <a target=":_blank" href="https://www.freecodecamp.org/espanol/certification/Montero077/responsive-web-design">Responsive Web Desing</a>. Exlelente para trabajar en grupo.</p>
           </div>
+          <!-- Imagen SVG -->
             <img id="image1" src="./svg/Designer.svg" alt="imagen">
         </section>
       </div>
@@ -58,17 +65,17 @@
     <div class="skills container-fluid" id="skills">
       <section>
         <div id="parrafo2">
-          <h3>My skills</h3>
+          <h3>Habilidades</h3>
           <p>He aprendido a utilizar varias herramientas para el diseño web responsivo y estatico tambien para la edicion de fotos y videos.</p>
         </div>
-
+        <!-- Imagen SVG -->
         <img id="image2" src="./svg/html-css-js.svg" alt="image">
       </section>
     </div>
     <hr>
   <!-- JOBS -->
     <div class=" container-fluid" id="jobs">
-        <h3>My Jobs</h3>
+        <h3>Proyectos</h3>
         <div class="jobs container-fluid">
           <!-- JOB1 -->
           <div class="job izquierda" id="job1">
@@ -114,7 +121,7 @@
     </div>
   </div>
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="group1">
       <div class="box">
         <figure>
@@ -128,11 +135,12 @@
         <p>La mejor opcion a la hora de crear un equipo para crear paginas web</p>
       </div>
       <div class="box">
-        <h2>Siguenos</h2>
+        <h2>Contactame</h2>
         <div class="red-social">
-          <a href=""><img src="./svg/facebook.svg" alt=""></a>
-          <a href=""><img src="./svg/instagram.svg" alt=""></a>
-          <a href=""><img src="./svg/twitter.svg" alt=""></a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100009701500851"><img src="./svg/facebook.svg" alt="Facebook"></a>
+          <a target="_blank" href="https://www.instagram.com/emmanuel_oje.5/"><img src="./svg/instagram.svg" alt="Instagram"></a>
+          <a target="_blank" href="https://www.linkedin.com/in/emmanuel-ojeda-270285204/"><img src="./svg/linkedin.svg" alt=""></a>
+          <a target="_blank" href="https://github.com/emmanuelmontero0"><img src="./svg/github.svg" alt=""></a>
         </div>
       </div>
     </div>
